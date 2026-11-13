@@ -1,8 +1,9 @@
+import 'dotenv/config';
 import express from 'express';
 import { MongoClient, ObjectId } from 'mongodb';
 import session from 'express-session';
 
-const url = "mongodb://localhost:27017";
+const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
 const basepath = process.cwd();
 const app = express();
@@ -10,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 
 app.use(session({
-    secret: 'campusfix_demo_secret',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
