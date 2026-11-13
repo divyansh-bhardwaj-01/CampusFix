@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFix - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <div class="logo-row">
+                <div class="logo-icon">CF</div>
+
+                <div class="logo-text">
+                    <h2>CampusFix</h2>
+                    <p>Report • Resolve • Improve</p>
+                </div>
+            </div>
+
+            <a href="/dashboard" class="nav-link">
+                🏠 Dashboard
+            </a>
+
+            <a href="/report" class="nav-link">
+                📝 Report Issue
+            </a>
+
+            <a href="/my-reports" class="nav-link">
+                📋 My Reports
+            </a>
+
+            <a href="/profile" class="nav-link">
+                👤 Profile
+            </a>
+
+            <div class="sidebar-bottom">
+                <p>Better Campus</p>
+                <p>For a Brighter Future</p>
+            </div>
+
+        </div>
+
+        <div class="main">
+
+            <div class="content">
+
+                <div class="banner">
+
+                    <div class="banner-text">
+
+                        <h2>Hello, <%=student.fullName%>! 👋</h2>
+
+                        <p>
+                            Report campus issues and help us make
+                            your campus better.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">▣</div>
+
+                        <h2>
+                            <%=issueslength%>
+                        </h2>
+
+                        <p>Total Reports</p>
+
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">✓</div>
+                        <h2>0</h2>
+                        <p>Resolved</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">◷</div>
+
+                        <h2>
+                            <%=pendinglength%>
+                        </h2>
+
+                        <p>Pending</p>
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">↻</div>
+
+                        <h2>0</h2>
+
+                        <p>In Progress</p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="content-row">
+
+                    <div class="card half-card">
+
+                        <h3>Reports by Category</h3>
+
+                        <p>
+                            💡 Electrical
+                            <span class="right-text">
+                                <%= electricalCount %>
+                            </span>
+                        </p>
+
+                        <p>
+                            📶 Wi-Fi
+                            <span class="right-text">
+                                <%= wifiCount %>
+                            </span>
+                        </p>
+
+                        <p>
+                            💧 Water
+                            <span class="right-text">
+                                <%= waterCount %>
+                            </span>
+                        </p>
+
+                        <p>
+                            🧹 Cleanliness
+                            <span class="right-text">
+                                <%= cleanlinessCount %>
+                            </span>
+                        </p>
+
+                        <p>
+                            🪑 Furniture
+                            <span class="right-text">
+                                <%= furnitureCount %>
+                            </span>
+                        </p>
+
+                        <p>
+                            ••• Other
+                            <span class="right-text">
+                                <%= otherCount %>
+                            </span>
+                        </p>
+
+                    </div>
+
+                    <div class="card half-card">
+
+                        <h3>Quick Actions</h3>
+
+                        <a href="/report" class="button">
+                            + Report an Issue
+                        </a>
+
+                        <a href="/my-reports" class="button light-button">
+                            View My Reports
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer>
+                © 2026 CampusFix | Better Campus, Better Future
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

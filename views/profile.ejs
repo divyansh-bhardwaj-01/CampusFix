@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFix - Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <div class="logo-row">
+
+                <div class="logo-icon">CF</div>
+
+                <div class="logo-text">
+                    <h2>CampusFix</h2>
+                    <p>Report • Resolve • Improve</p>
+                </div>
+
+            </div>
+
+            <a href="/dashboard" class="nav-link">
+                🏠 Dashboard
+            </a>
+
+            <a href="/report" class="nav-link">
+                📝 Report Issue
+            </a>
+
+            <a href="/my-reports" class="nav-link">
+                📋 My Reports
+            </a>
+
+            <a href="/profile" class="nav-link">
+                👤 Profile
+            </a>
+            <div class="sidebar-bottom">
+                <p>Better Campus</p>
+                <p>For a Brighter Future</p>
+            </div>
+
+        </div>
+
+
+        <div class="main">
+
+            <div class="content">
+
+                <div class="page-heading">
+
+                    <div class="page-heading-row">
+
+                        <h2>Profile Information</h2>
+
+                        <form action="/logout" method="POST">
+                            <button type="submit" class="logout-btn">
+                                Logout
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <p>
+                        View your student details and report activity.
+                    </p>
+
+                </div>
+
+                <div class="card profile-card">
+
+                    <div class="profile-top">
+
+                        <div class="profile-avatar">
+                            <%= student.fullName.charAt(0).toUpperCase() %>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                <%= student.fullName %>
+                            </h2>
+
+                            <p>
+                                <%= student.email %>
+                            </p>
+
+                            <p>
+                                <%= student.year %> • <%= student.course %>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <h3>Student Details</h3>
+
+                    <div class="details-row">
+
+                        <div>
+                            <span>Full Name</span>
+                            <strong>
+                                <%= student.fullName %>
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Course</span>
+                            <strong>
+                                <%= student.course %>
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Year</span>
+                            <strong>
+                                <%= student.year %>
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <strong>
+                                <%= student.email %>
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer>
+                © 2026 CampusFix | Better Campus, Better Future
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

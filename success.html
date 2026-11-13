@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFix - Success</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .success-container {
+            width: 100%;
+            max-width: 520px;
+            margin: auto;
+        }
+
+        .success-card {
+            background: white;
+            padding: 45px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .success-icon {
+            font-size: 60px;
+            margin-bottom: 18px;
+        }
+
+        .success-card h2 {
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        .success-message {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .status {
+            margin-bottom: 25px;
+        }
+
+        .status span {
+            color: #d97706;
+            font-weight: 600;
+        }
+
+        .dashboard-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .dashboard-link:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #777;
+            font-size: 13px;
+        }
+ 
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .success-card {
+                padding: 35px 20px;
+            }
+
+            .success-icon {
+                font-size: 50px;
+            }
+
+            .success-card h2 {
+                font-size: 21px;
+            }
+
+            .dashboard-link {
+                display: block;
+                width: 100%;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+ 
+        @media (max-width: 360px) {
+            .success-card {
+                padding: 28px 15px;
+            }
+
+            .success-card h2 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="success-container">
+
+        <div class="success-card">
+
+            <div class="success-icon">✅</div>
+
+            <h2>Report Submitted Successfully!</h2>
+
+            <p class="success-message">
+                Thank you for reporting the issue.
+                Your report has been recorded successfully.
+            </p>
+
+            <p class="status">
+                <strong>Status:</strong>
+                <span>Pending</span>
+            </p>
+
+            <a href="/dashboard" class="dashboard-link">
+                Back to Dashboard
+            </a>
+
+        </div>
+
+        <footer>
+            © 2026 CampusFix | Better Campus, Better Future
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

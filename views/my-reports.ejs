@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFix - My Reports</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <div class="logo-row">
+
+                <div class="logo-icon">CF</div>
+
+                <div class="logo-text">
+                    <h2>CampusFix</h2>
+                    <p>Report • Resolve • Improve</p>
+                </div>
+
+            </div>
+
+            <a href="/dashboard" class="nav-link">
+                🏠 Dashboard
+            </a>
+
+            <a href="/report" class="nav-link">
+                📝 Report Issue
+            </a>
+
+            <a href="/my-reports" class="nav-link">
+                📋 My Reports
+            </a>
+
+            <a href="/profile" class="nav-link">
+                👤 Profile
+            </a>
+
+            <div class="sidebar-bottom">
+                <p>Better Campus</p>
+                <p>For a Brighter Future</p>
+            </div>
+
+        </div>
+
+        <div class="main">
+
+            <div class="content">
+
+                <div class="page-heading row-heading">
+
+                    <div>
+                        <h2>Track Your Reports</h2>
+
+                        <p>
+                            Check the status of the problems
+                            you have reported.
+                        </p>
+                    </div>
+
+                    <a href="/report" class="button new-report-button">
+                        + New Report
+                    </a>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <div class="summary-card">
+                        <p>Total Reports</p>
+                        <h2>
+                            <%= totalReports %>
+                        </h2>
+                    </div>
+
+                    <div class="summary-card">
+                        <p>Pending Reports</p>
+                        <h2>
+                            <%= pendingReports %>
+                        </h2>
+                    </div>
+
+                    <div class="summary-card">
+                        <p>In Progress</p>
+                        <h2>0</h2>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>All Reports</h3>
+
+                    <% if (reports.length===0) { %>
+
+                        <p>You haven't submitted any reports yet.</p>
+
+                        <% } else { %>
+
+                            <% reports.forEach(report=> { %>
+
+                                <div class="report-item report-list-item">
+
+                                    <div>
+
+                                        <p class="ticket">
+                                            • <%= report.category %>
+                                        </p>
+
+                                        <h4>
+                                            <%= report.title %>
+                                        </h4>
+
+                                        <p>
+                                            <%= report.building %>,
+                                                <%= report.room %>
+                                        </p>
+
+                                        <p>
+                                            Status: <%= report.status %>
+                                        </p>
+
+                                        <p>
+                                            Submitted:
+                                            <%= new Date(report.createdAt).toLocaleDateString() %>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <% }) %>
+
+                                    <% } %>
+
+                </div>
+
+            </div>
+
+            <footer>
+                © 2026 CampusFix | Better Campus, Better Future
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

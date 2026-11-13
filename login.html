@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFix - Student Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #d1e1f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #1e2530;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border: 1px solid #e7ebf1;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 8px 30px rgba(16, 28, 46, 0.07);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            margin-bottom: 30px;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: #1b6ffd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            color: #101c2e;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: #8a94a3;
+            margin-top: 3px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .heading h2 {
+            font-size: 23px;
+            margin-bottom: 8px;
+            color: #14213a;
+        }
+
+        .heading p {
+            font-size: 13px;
+            color: #6b7686;
+        }
+
+        .form-group {
+            margin-bottom: 19px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #303b4c;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #e1e6ee;
+            border-radius: 9px;
+            outline: none;
+            font-size: 13px;
+            background: #ffffff;
+        }
+
+        .form-group input:focus {
+            border-color: #1b6ffd;
+            box-shadow: 0 0 0 3px rgba(27, 111, 253, 0.10);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 9px;
+            background: #1b6ffd;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .login-btn:hover {
+            background: #1559d0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #9aa3b1;
+            margin-top: 30px;
+        }
+
+
+
+        .demo-credentials {
+            margin-top: 18px;
+            padding: 12px;
+            background: #f1f6ff;
+            border: 1px solid #dce8ff;
+            border-radius: 9px;
+            text-align: center;
+        }
+
+        .demo-credentials h3 {
+            font-size: 13px;
+            color: #1b6ffd;
+            margin-bottom: 8px;
+        }
+
+        .demo-credentials p {
+            font-size: 12px;
+            color: #303b4c;
+            margin: 5px 0;
+        }
+
+        .demo-credentials strong {
+            color: #14213a;
+        }
+
+
+        @media (max-width: 480px) {
+
+            .login-container {
+                padding: 27px 22px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="logo">
+
+            <div class="logo-icon">C</div>
+
+            <div class="logo-text">
+                <h1>CampusFix</h1>
+                <p>REPORT · RESOLVE · IMPROVE</p>
+            </div>
+
+        </div>
+
+        <div class="heading">
+
+            <h2>Student Login</h2>
+
+            <p>
+                Welcome back! Login to access your campus dashboard.
+            </p>
+
+        </div>
+
+        <form action="/login" method="POST">
+
+            <div class="form-group">
+
+                <label for="email">College Email</label>
+
+                <input type="email" id="email" name="email" placeholder="Enter your college email"
+                    autocomplete="username" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="password">Password</label>
+
+                <input type="password" id="password" name="password" placeholder="Enter your password"
+                    autocomplete="current-password" required>
+
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login to CampusFix
+            </button>
+
+        </form>
+
+        <div class="footer">
+            © 2026 CampusFix. All rights reserved.
+        </div>
+
+        <div class="demo-credentials">
+            <h3>Demo Login Credentials</h3>
+            <p>Email: <strong>divyansh@gmail.com</strong></p>
+            <p>Password: <strong>divyansh_123</strong></p>
+        </div>
+
+    </div>
+
+
+    <script>
+        const key = new URLSearchParams(window.location.search);
+        if (key.get('error') === 'invalid') {
+            alert('Invalid email or password! Please try again.');
+        }
+    </script>
+</body>
+
+</html>
